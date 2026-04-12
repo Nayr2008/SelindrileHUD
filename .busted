@@ -1,0 +1,15 @@
+-- busted configuration (https://lunarmodules.github.io/busted/)
+return {
+    default = {
+        -- Spec files live under tests/
+        ROOT        = { "tests" },
+        -- Recursive search: pick up any *_spec.lua files
+        PATTERN     = "_spec",
+        -- Add tests/helpers so mock_windower is on the path
+        LOADERS     = { "lua" },
+        -- Output format (use "TAP" for CI integration if needed)
+        OUTPUT      = "utfTerminal",
+        -- Lua version compatibility
+        ["lua"]     = "lua5.1",  -- Windower uses LuaJIT (5.1 compatible)
+    },
+}
